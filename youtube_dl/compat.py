@@ -2345,11 +2345,6 @@ except ImportError:
     compat_subprocess_get_DEVNULL = lambda: open(os.path.devnull, 'w')
 
 try:
-    import http.server as compat_http_server
-except ImportError:
-    import BaseHTTPServer as compat_http_server
-
-try:
     compat_str = unicode  # Python 2
 except NameError:
     compat_str = str
@@ -2988,7 +2983,6 @@ __all__ = [
     'compat_html_entities',
     'compat_html_entities_html5',
     'compat_http_client',
-    'compat_http_server',
     'compat_input',
     'compat_integer_types',
     'compat_itertools_count',
